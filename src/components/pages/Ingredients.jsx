@@ -1,14 +1,15 @@
 import { useEffect, useContext } from 'react'
 
-import { useLocation } from 'react-router-dom'
+import { useLocation,useNavigate } from 'react-router-dom'
 import MyContext from '../../context/MyContext'
 
 const Ingredients = () => {
 
 
-    const location = useLocation()
-    const mealId = location.state
-    const context = useContext(MyContext)
+    const location = useLocation();
+    const mealId = location.state;
+    const context = useContext(MyContext);
+    const navigate = useNavigate();
 
 
     const { ingredients, setIngredients } = context
@@ -49,15 +50,18 @@ const Ingredients = () => {
     const ingredientsList = ingredientsArray.map(object => <li>{object.ingredient}---{object.measurement}</li>)
  
     return (
+       <div> 
         <div>
-            <h2>{strMeal}</h2>
-            <img src={strMealThumb} alt={strMeal} />
-            <p>{strInstructions}</p>
-            <ul>
-                {ingredientsList}
-            </ul>
-        </div>
-    )
+          <h2>{strMeal}</h2>
+          <img src={strMealThumb} alt={strMeal} />
+          <p>{strInstructions}</p>
+          <ul>{ingredientsList}</ul>
+          </div>
+        
+        <button className="button2" onClick={() => navigate(-1)}>Return to Meals</button>
+    
+      </div>
+    );
 }
 
 export default Ingredients
