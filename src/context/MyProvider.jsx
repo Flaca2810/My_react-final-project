@@ -12,9 +12,8 @@ const MyProvider = (props) => {
     const [search, setSearch] = useState("")
 
     const handleSubmit = (e)=>{
-    e.preventDefault()
-    setSearch(input)
-
+        // e.preventDefault()
+        setSearch(input)
     }
 
         useEffect(() =>{
