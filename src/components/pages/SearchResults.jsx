@@ -1,6 +1,7 @@
 import React ,{useEffect, useNavigate, useState, useContext} from 'react'
 
 import MyContext from '../../context/MyContext'
+import MealCard from '../MealCard.jsx'
 
 const SearchResults = () => {
 
@@ -12,7 +13,7 @@ const SearchResults = () => {
     const {search} = context
 
 
-
+const [ meals, setMeals ] = useState([])
 
 useEffect(() => {
   try {
@@ -21,22 +22,22 @@ useEffect(() => {
        `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
       );
       const data = await response.json();
-      console.log(data.meals);
+      setMeals(data.meals || []);
     
     };
     getResults();
   } catch (error) {
     console.log(error);
   }
-}, []);
+}, [search]);
 
 
 
- //const mealsList = data.meals.map(meal => <MealCard key={meal.idMeal} meal={meal}/>)
+ const mealsList = meals.map(meal => <MealCard key={meal.idMeal} meal={meal}/>)
 
     return (
         <div>
-         SearchResults   
+         {mealsList}   
         </div>
     )
 }
