@@ -1,23 +1,51 @@
 #root{
-    background-color :rgb(4, 66, 66)
+    background-color :white
 
 }
 
-h1{
-    color: rgb(218, 127, 127);
-    
+
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
 }
 
-.button2{
+
+h1.headline{
+    color: rgb(134, 92, 40);
+    font-size: 4em;
+    text-align: center;
+    font-style: italic
+}
+
+
+h2.foodcategories {
+     color: rgb(134, 92, 40);
+    font-size: 3em;
+}
+
+
+.headingsOfCategories{
+    text-align: center
+}
+
+
+
+.buttonIngredients{                               
     border: solid black 2px;
-    
-    background-color:pink}
+    font-size: 14px;
+    background-color:grey
+}
+
+
 
 .container{
 display: flex;
 flex-wrap: wrap;
 margin: 0 auto;
-
+width:100%;
+justify-content: center;
 
 }
 
@@ -26,9 +54,108 @@ margin: 0 auto;
     text-align: center;
 }
 
+
 .card{
 border: solid black 2px;
 margin: 5px;
 padding: 5px;
+background-color: white;
+border-radius: 20px;
 
+
+}
+
+
+.categoryLink{
+text-decoration: none;
+color:rgb(134, 92, 40);
+font-style: italic, bold;
+
+
+}
+
+.formSearch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.searchField{
+    border: solid black 2px;
+    border-radius:10px;
+    width: 200px;
+    height:30px;
+}
+
+
+.searchbutton{
+    width: 160px;
+    color: rgb(134, 92, 40);
+}
+
+
+
+.recipes{
+    padding-left:20px;
+}
+
+
+.recipesInnerContainer{
+   
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+
+h5{
+    font-size: 2em;
+
+}
+
+.recipes h4{
+    
+   width:100%;
+   text-align: center;
+   font-size: 30px;
+   padding-top:1em;
+   font-size: 3em;
+}
+
+
+.ingredients h6{
+    font-size:1.5em;
+} 
+
+.ingredients {
+ width:100%;
+ padding-left: 60px;
+}
+
+
+.recipePicture{
+ border-radius:15px;
+ 
+ 
+}
+
+.instruction h6{
+    font-size:1.5em;
+}
+
+
+.instruction{
+
+width:100%;
+
+}
+
+footer{
+    background-color:brown;
+    border: black 2px  solid;
+    text-align: center;
 }

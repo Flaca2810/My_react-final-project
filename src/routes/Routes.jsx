@@ -1,5 +1,5 @@
 import {HashRouter as Router, Routes as Switch, Route} from 'react-router-dom'
-import NavBar from '../components/Header'
+import Footer from '../components/Footer'
 
 import MyProvider from '../context/MyProvider'
 import Header from '../components/Header'
@@ -22,6 +22,7 @@ const Routes = () => {
             <Route path="/searchresults" element={<SearchResults />} />
           </Switch>
         </Router>
+        <Footer />
       </MyProvider>
     );
 }

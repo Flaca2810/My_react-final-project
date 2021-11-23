@@ -1,6 +1,6 @@
 import {useContext} from 'react'
 import CategoryCard from '../CategoryCard'
-
+import Form from '../Form'
 import MyContext from '../../context/MyContext'
 
 const Home = () => {
@@ -11,7 +11,6 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h1>Food Categories</h1>
             {categoriesList}
         </div>
     )

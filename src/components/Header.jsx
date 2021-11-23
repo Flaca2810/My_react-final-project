@@ -4,11 +4,12 @@ import Form from './Form'
 
 const Header = () => {
     return (
-        <header>
-        <h1>Welcome to my recipes page</h1>
+      <header>
+        <h1 class="headline">Welcome to my recipes page</h1>
+        <h2 className="foodcategories">Food Categories</h2>
         <Form />
-        </header>
-    )
+      </header>
+    );
 }
 
 export default Header

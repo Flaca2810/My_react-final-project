@@ -7,9 +7,9 @@ const CategoryCard = ({ category }) => {
 
 
     return (
-        <Link to='/meals' state={strCategory}>
+        <Link className="categoryLink" to='/meals' state={strCategory}>
             <div className='card'>
-            <h3>{strCategory}</h3>
+            <h3 className="headingsOfCategories">{strCategory}</h3>
             <img src={strCategoryThumb} alt={strCategory} />
 
 
